@@ -21,7 +21,6 @@ a04c6fdef31ce7b27fe9e327f2f61b42 *R/CalculateSpectrogram.R
 5fc8c31563811c283eb25a440219b293 *R/CreateFreqAnalysis.R
 07e603eface19336747c17b6fb4d37a7 *R/CreateHRVData.R
 26f9cb37f1aba8fa93446e586e39b5dc *R/CreateNonLinearAnalysis.R
-f7ab29e93a89272001b16c072a2bf92c *R/CreateTimeAnalysis.R
 632b62c81494db70894a6a0cd607b0af *R/EditNIHR.R
 9e9fdf07dd3eb190dbd3d393b76a6984 *R/ExtractTimeSegment.R
 8c14532df2fa1a830f742f91ecc34770 *R/FilterNIHR.R
