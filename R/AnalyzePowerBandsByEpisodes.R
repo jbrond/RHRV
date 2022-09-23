@@ -6,6 +6,7 @@
 #' @param HRVData Data structure that stores the beats register and information related to it. 
 #' @param indexFreqAnalysis Integer value denoting which frequency analysis is going to be analyzed using func. Default: 1
 #' @param Tag Type of episode
+#' @param doOutOfEpisodeAnalysis Enable or disbale out of episode analysis
 #' @param verbose Deprecated argument maintained for compatibility, use SetVerbose() instead
 #' @param func Function to be applied to each power band inside and outside episodes
 #' @param ... Optional arguments for func.
@@ -28,7 +29,7 @@
 #'                                 bandtolerance = 0.01, relative = FALSE)
 #' results = AnalyzePowerBandsByEpisodes(hrv.data,indexFreqAnalysis=1,
 #'                                        Tag="Apnea",func=mean)}
-AnalyzePowerBandsByEpisodes = function(HRVData, indexFreqAnalysis = length(HRVData$FreqAnalysis), Tag="", verbose=NULL,func, ...) {
+AnalyzePowerBandsByEpisodes = function(HRVData, indexFreqAnalysis = length(HRVData$FreqAnalysis), Tag="", doOutOfEpisodeAnalysis=FALSE, verbose=NULL,func, ...) {
   # ----------------------------------------------
   # Analyzes PowerBands using Episodes information
   # ----------------------------------------------
@@ -68,7 +69,11 @@ AnalyzePowerBandsByEpisodes = function(HRVData, indexFreqAnalysis = length(HRVDa
   resultOut = list()
   for (band in bandNames){
     resultIn[[band]] = funcToApply(episodicInformation$InEpisodes[[band]], ...)
-    resultOut[[band]] = funcToApply(episodicInformation$OutEpisodes[[band]], ...)
+    
+    if (doOutOfEpisodeAnalysis==TRUE) {
+      resultOut[[band]] = funcToApply(episodicInformation$OutEpisodes[[band]], ...)
+    }
+    
   }
   
   

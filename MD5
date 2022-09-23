@@ -1,8 +1,6 @@
 de02a74d74618a7eb141d97280fa57fc *DESCRIPTION
 21656e925d8c9a20d915659afc3a2412 *NAMESPACE
 bd76015d70b0bfcd2950130abb1e43e5 *R/AddEpisodes.R
-ee9f3ea3e52e07d4d3327166923d041b *R/AnalyzeHRbyEpisodes.R
-53033b1c813a768ca4f1ecbd7a9bc589 *R/AnalyzePowerBandsByEpisodes.R
 fe08349b6b21556563d7decd94ba8210 *R/AvgIntegralCorrelation.R
 d4c76189196ce6c41cda320d78942ddd *R/BoundModwpt.r
 91ab0c7efbed795f57f1f4cb4b84cfcb *R/BuildNIHR.R
