@@ -1,5 +1,5 @@
 CreateTimeAnalysisByEpisodes <-
-  function(HRVData, Tag="", size = 60, numofbins = NULL,
+  function(HRVData, Tag="", size = 60, doOutOfEpisodeAnalysis=FALSE, numofbins = NULL,
            interval = 7.8125, verbose=NULL){
     if (!is.null(verbose)) {
       cat("  --- Warning: deprecated argument, using SetVerbose() instead ---\n    --- See help for more information!! ---\n")
@@ -23,15 +23,24 @@ CreateTimeAnalysisByEpisodes <-
     }    
     vectors=SplitNIRRbyEpisodes(HRVData,Tag=Tag)
     
-    resultIn = timeAnalysisStatistics(vectors$InEpisodesTime,vectors$InEpisodes,
-                                      size = size, numofbins = numofbins, 
-                                      interval = interval)
-    
-    resultOut = timeAnalysisStatistics(vectors$OutEpisodesTime,vectors$OutEpisodes,
-                                       size = size, numofbins = numofbins, 
-                                       interval = interval)
-    
-    result=list(resultIn=resultIn, resultOut=resultOut)
+    if (doOutOfEpisodeAnalysis==TRUE) {
+      resultIn = timeAnalysisStatistics(vectors$InEpisodesTime,vectors$InEpisodes,
+                                        size = size, numofbins = numofbins, 
+                                        interval = interval)
+      
+      resultOut = timeAnalysisStatistics(vectors$OutEpisodesTime,vectors$OutEpisodes,
+                                         size = size, numofbins = numofbins, 
+                                         interval = interval)
+      
+      result=list(resultIn=resultIn, resultOut=resultOut)
+    } else {
+      resultIn = timeAnalysisStatistics(vectors$InEpisodesTime,vectors$InEpisodes,
+                                        size = size, numofbins = numofbins, 
+                                        interval = interval)
+      
+      result=list(resultIn=resultIn)
+      
+    }
     
     return(result)
   }
