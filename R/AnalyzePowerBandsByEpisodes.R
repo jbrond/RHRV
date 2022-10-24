@@ -8,6 +8,7 @@
 #' @param Tag Type of episode
 #' @param doOutOfEpisodeAnalysis Enable or disbale out of episode analysis
 #' @param verbose Deprecated argument maintained for compatibility, use SetVerbose() instead
+#' @param doOutOfEpisodeAnalysis Boolean to do out of episodes analysis
 #' @param func Function to be applied to each power band inside and outside episodes
 #' @param ... Optional arguments for func.
 #' @return Returns a list with two objects, that is, the values of the application of the selected function
