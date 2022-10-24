@@ -48,9 +48,9 @@ CreateTimeAnalysis <-
       
       # check if there is an interval without beats
       if (length(RRWindow) == 0){
-        message = paste(sep = "", "Interval without beats from ",WindowMin,
-                        " to ",WindowMax," seconds! Returning NA in SDANN and SDNNIDX")
-        warning(message)
+        #message = paste(sep = "", "Interval without beats from ",WindowMin,
+        #                " to ",WindowMax," seconds! Returning NA in SDANN and SDNNIDX")
+        #warning(message)
         # introduce the NAs to ensure that the user notices the warning
         RRWindowMean[WindowIndex] = NA
         RRWindowSD[WindowIndex] = NA
@@ -66,9 +66,9 @@ CreateTimeAnalysis <-
       
       # check if there is an interval without beats
       if (length(RRDiffWindow) == 0){
-        message = paste(sep = "", "Interval without beats from ",WindowMin,
-                        " to ",WindowMax," seconds! Returning NA in rMSSDW")
-        warning(message)
+        #message = paste(sep = "", "Interval without beats from ",WindowMin,
+        #                " to ",WindowMax," seconds! Returning NA in rMSSDW")
+        #warning(message)
         # introduce the NAs to ensure that the user notices the warning
         RRWindowRMSSD[WindowIndex] = NA
         # there is no need to compute more windows
