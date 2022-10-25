@@ -50,7 +50,6 @@ c8f90c3c66e9a61d406b9b139704fd10 *R/ReadFromFile.R
 bb39494f327870c8f1e5040ceed0205e *R/RemoveEpisodes.R
 839edac4e2377626a50875eacfd4814c *R/SetVerbose.R
 9e60630f4950ecb6f31ae429895c81fd *R/SplitHRbyEpisodes.R
-f085e649bf2a3f2d99838fb798481f7f *R/SplitPowerBandByEpisodes.R
 cf0c56a952cc2fe89427b17e4f9bd386 *R/StationaryFrequencyAnalysis.R
 9f179639aea0200c37f667120f3e7ad4 *R/Utils.R
 6378e7766306fe771f46b49695a21409 *R/WriteToFile.R

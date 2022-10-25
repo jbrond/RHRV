@@ -5,7 +5,7 @@
 \title{Analyze power band by episodes}
 \usage{
 AnalyzePowerBandsByEpisodes(HRVData,
-  indexFreqAnalysis = length(HRVData$FreqAnalysis), Tag = "",
+  indexFreqAnalysis = length(HRVData$FreqAnalysis), Tag = "", doOutOfEpisodeAnalysis = FALSE,
   verbose = NULL, func, ...)
 }
 \arguments{
@@ -14,6 +14,8 @@ AnalyzePowerBandsByEpisodes(HRVData,
 \item{indexFreqAnalysis}{Integer value denoting which frequency analysis is going to be analyzed using func. Default: 1}
 
 \item{Tag}{Type of episode}
+
+\item{doOutOfEpisodeAnalysis}{ Do Out of episode analysis }
 
 \item{verbose}{Deprecated argument maintained for compatibility, use SetVerbose() instead}
 
